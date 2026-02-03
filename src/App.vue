@@ -1,6 +1,6 @@
 <template>
   <div class="bg-brand-cream min-h-screen selection:bg-brand-gold selection:text-white">
-    <TheNavbar />
+    <TheNavbar v-if="$route.name !== 'LookBook'" />
     
     <main>
       <router-view v-slot="{ Component }">
@@ -10,7 +10,7 @@
       </router-view>
     </main>
 
-    <TheFooter />
+    <TheFooter v-if="$route.name !== 'LookBook'" />
   </div>
 </template>
 

@@ -15,7 +15,7 @@
             Combining classic Rida shapes with modern, simple styles. Every piece is made with care and timeless elegance.
           </p>
           <div class="flex items-center space-x-6 pt-4">
-            <a href="https://www.instagram.com/shakirsignaturestyles/" class="group flex items-center space-x-3 text-stone-400 hover:text-brand-gold transition-all duration-500">
+            <a href="https://www.instagram.com/Shakirsignaturestyles/" class="group flex items-center space-x-3 text-stone-400 hover:text-brand-gold transition-all duration-500">
               <span class="text-[10px] uppercase tracking-[0.3em]">Instagram</span>
               <div class="w-8 h-px bg-stone-800 group-hover:w-12 group-hover:bg-brand-gold transition-all duration-500"></div>
             </a>
@@ -64,7 +64,7 @@
       <!-- Footer Bottom -->
       <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
         <p class="text-[9px] uppercase tracking-[0.4em] text-stone-600">
-          © {{ currentYear }} Shakir Style • All Rights Reserved
+          © {{ currentYear }} Shakir Styles • All Rights Reserved
         </p>
         <div class="flex items-center space-x-8 text-stone-600 text-[9px] uppercase tracking-[0.4em]">
           <a href="#" class="hover:text-stone-400 transition-colors">Privacy Policy</a>

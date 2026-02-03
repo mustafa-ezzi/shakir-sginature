@@ -47,7 +47,7 @@
           
           <h1 class="hero-title leading-[0.85] text-stone-900 w-full">
             <span class="reveal-container block">
-              <span class="reveal-text italic-serif">shakir</span>
+              <span class="reveal-text italic-serif">Shakir</span>
             </span>
             <span class="reveal-container block translate-x-6 sm:translate-x-12 md:translate-x-16 lg:translate-x-24">
               <span class="reveal-text text-gold">Signature Styles.</span>

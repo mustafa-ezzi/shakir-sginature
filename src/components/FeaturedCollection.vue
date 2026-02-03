@@ -35,9 +35,7 @@
             />
 
             <div class="absolute bottom-0 left-0 w-full p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500 z-20">
-              <div class="bg-white/90 backdrop-blur-md p-4 text-center">
-                <span class="text-[9px] tracking-[0.3em] uppercase font-bold text-stone-900">View Product Details</span>
-              </div>
+              
             </div>
           </div>
         </div>

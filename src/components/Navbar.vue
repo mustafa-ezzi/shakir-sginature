@@ -16,7 +16,7 @@
           <div class="relative h-10 sm:h-12 md:h-14 lg:h-16 w-auto flex items-center">
             <img 
               src="/logo.png" 
-              alt="Shakir Style Logo"
+              alt="Shakir Styles Logo"
               class="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </div>

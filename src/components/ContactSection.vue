@@ -24,8 +24,8 @@ Whether youâ€™re looking for a custom Rida or something from our collection, weâ
           <div class="space-y-10">
             <div class="group cursor-pointer">
               <h3 class="text-stone-400 text-[9px] uppercase tracking-[0.4em] mb-2 font-bold">Email us</h3>
-              <a href="mailto:info@shakirsignaturestyle.com" class="text-xl font-serif italic text-stone-800 border-b border-transparent group-hover:border-brand-gold transition-all duration-500">
-                info@shakirsignaturestyle.com
+              <a href="mailto:info@Shakirsignaturestyle.com" class="text-xl font-serif italic text-stone-800 border-b border-transparent group-hover:border-brand-gold transition-all duration-500">
+                info@Shakirsignaturestyle.com
               </a>
             </div>
 

@@ -1,6 +1,32 @@
 <template>
-  <section id="lookbook" class="bg-[#faf9f6] py-24 md:py-40">
-    <div class="max-w-[1600px] mx-auto px-6">
+  <section id="lookbook" class="bg-[#faf9f6] min-h-screen">
+    <!-- Logo Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-xl shadow-lg border-b border-stone-200">
+      <div class="max-w-[1600px] mx-auto px-6 py-3 md:py-4">
+        <div class="flex justify-between items-center">
+          <a href="#hero" @click="goHome" class="flex items-center group">
+            <div class="relative h-10 sm:h-12 md:h-14 w-auto flex items-center">
+              <img 
+                src="/logo.png" 
+                alt="Shakir Styles Logo"
+                class="h-full w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+          </a>
+          <button 
+            @click="goHome" 
+            class="inline-flex items-center gap-2 text-brand-gold hover:text-stone-900 transition-colors duration-300 text-[10px] uppercase tracking-[0.3em] font-semibold"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to Home
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="max-w-[1600px] mx-auto px-6 pt-24 md:pt-32 mb-12">
       
       <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
         <div class="max-w-xl">
@@ -75,7 +101,7 @@
                 {{ filteredRidas[selectedImage].description }}
               </p>
               
-              <a href="https://wa.me/yourlink" target="_blank" class="inline-block border border-stone-900 px-10 py-4 text-[10px] uppercase tracking-[0.4em] hover:bg-stone-900 hover:text-white transition-all duration-500 text-center">
+              <a :href="getWhatsAppLink(filteredRidas[selectedImage].title)" target="_blank" class="inline-block border border-stone-900 px-10 py-4 text-[10px] uppercase tracking-[0.4em] hover:bg-stone-900 hover:text-white transition-all duration-500 text-center">
                 Inquire About Piece
               </a>
             </div>
@@ -88,6 +114,19 @@
 
 <script setup>
 import { ref, computed } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const goHome = () => {
+  router.push({ path: '/', hash: '#hero' });
+};
+
+const getWhatsAppLink = (title) => {
+  const message = `I am interested in: ${title}`;
+  const encodedMessage = encodeURIComponent(message);
+  return `https://wa.me/923212600644?text=${encodedMessage}`;
+};
 
 const activeCategory = ref('All');
 const selectedImage = ref(null);
