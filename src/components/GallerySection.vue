@@ -74,7 +74,9 @@
 <p class="text-stone-500 font-light leading-relaxed mb-8">
   {{ lightboxImages[currentLightboxIndex].description }}
 </p>
-            <button class="text-[10px] tracking-[0.3em] uppercase font-black border-b border-stone-900 pb-1">Inquire for Custom Fit</button>
+<a :href="getWhatsAppLink(lightboxImages[currentLightboxIndex].title)" target="_blank" class="text-[10px] tracking-[0.3em] uppercase font-black border-b border-stone-900 pb-1">
+                Inquire for Custom Fit
+              </a>            
           </div>
         </div>
       </div>
@@ -87,41 +89,47 @@ import { ref } from 'vue';
 
 const lightboxOpen = ref(false);
 const currentLightboxIndex = ref(0);
+const getWhatsAppLink = (title) => {
+  const message = `Hello,
 
+I hope you’re doing well. I’m contacting you to inquire about your services and would like to understand the pricing, delivery timeline, and next steps of this rida: ${title}`;
+  const encodedMessage = encodeURIComponent(message);
+  return `https://wa.me/923212600644?text=${encodedMessage}`;
+};
 const lightboxImages = [
   {
     src: '/blood-red.jpeg',
-    title: 'Ivory Contrast Panels',
+    title: 'Blood Red',
     tag: 'Royal Edition',
     description: 'A bold design with rich tones and soft contrast panels. Made to stand out while staying elegant.'
   },
   {
     src: '/deep-teal.jpeg',
-    title: 'Soft Mint Accents',
+    title: 'Deep Teal Green',
     tag: 'Nature Series',
     description: 'Fresh colors inspired by nature, balanced with calm tones for a relaxed and graceful look.'
   },
   {
     src: '/double-pink.jpeg',
-    title: 'Intricate Black Lace',
+    title: 'Double Shaded Pink',
     tag: 'Romantic Silk',
     description: 'Delicate lace details paired with smooth fabric, creating a soft and romantic feel.'
   },
   {
     src: '/mocha-brown.jpeg',
-    title: 'Earthy Textures',
+    title: 'Mocha Brown',
     tag: 'Minimalist',
     description: 'Warm earthy shades with a clean design. Simple, timeless, and easy to wear.'
   },
   {
     src: '/ocean-guilt.jpeg',
-    title: 'Deep Blue Velvet',
+    title: 'Ocean Guilt',
     tag: 'Evening Wear',
     description: 'A deep blue tone with a smooth finish, perfect for evening gatherings and special moments.'
   },
   {
     src: '/pastel-lavender.jpeg',
-    title: 'Soft Lavender Flow',
+    title: 'Pastel Lavender',
     tag: 'Summer Breeze',
     description: 'Light lavender shades designed for comfort, softness, and warm summer days.'
   },
