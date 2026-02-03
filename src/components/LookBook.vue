@@ -123,7 +123,9 @@ const goHome = () => {
 };
 
 const getWhatsAppLink = (title) => {
-  const message = `I am interested in: ${title}`;
+  const message = `Hello,
+
+I hope you’re doing well. I’m contacting you to inquire about your services and would like to understand the pricing, delivery timeline, and next steps of this rida: ${title}`;
   const encodedMessage = encodeURIComponent(message);
   return `https://wa.me/923212600644?text=${encodedMessage}`;
 };
@@ -134,22 +136,22 @@ const selectedImage = ref(null);
 const categories = ['All', 'Royal Edition', 'Nature Series', 'Summer Breeze', 'Evening Wear', 'Minimalist', 'Statement'];
 
 const lightboxImages = [
-  { src: '/blood-red.jpeg', title: 'Ivory Contrast Panels', tag: 'Royal Edition', description: 'A bold design with rich tones and soft contrast panels. Made to stand out while staying elegant.' },
-  { src: '/deep-teal.jpeg', title: 'Soft Mint Accents', tag: 'Nature Series', description: 'Fresh colors inspired by nature, balanced with calm tones for a relaxed and graceful look.' },
-  { src: '/double-pink.jpeg', title: 'Intricate Black Lace', tag: 'Romantic Silk', description: 'Delicate lace details paired with smooth fabric, creating a soft and romantic feel.' },
-  { src: '/mocha-brown.jpeg', title: 'Earthy Textures', tag: 'Minimalist', description: 'Warm earthy shades with a clean design. Simple, timeless, and easy to wear.' },
-  { src: '/ocean-guilt.jpeg', title: 'Deep Blue Velvet', tag: 'Evening Wear', description: 'A deep blue tone with a smooth finish, perfect for evening gatherings and special moments.' },
-  { src: '/pastel-lavender.jpeg', title: 'Soft Lavender Flow', tag: 'Summer Breeze', description: 'Light lavender shades designed for comfort, softness, and warm summer days.' },
-  { src: '/pink-jodi.jpeg', title: 'Blush Harmony', tag: 'Summer Breeze', description: 'Gentle pink tones blended for a calm and balanced look with a modern touch.' },
-  { src: '/soft-pink.jpeg', title: 'Powder Pink Grace', tag: 'Summer Breeze', description: 'A soft pink shade that feels light, airy, and perfect for everyday elegance.' },
-  { src: '/antique-mehroon.jpeg', title: 'Classic Mehroon', tag: 'Heritage', description: 'A deep traditional color inspired by classic styles, refined for modern wear.' },
-  { src: '/baby-blue.jpeg', title: 'Calm Blue Ease', tag: 'Day Wear', description: 'A gentle blue tone that feels fresh, relaxed, and comfortable throughout the day.' },
-  { src: '/blush-peach.jpeg', title: 'Peach Softness', tag: 'Spring Edit', description: 'Warm peach tones that bring softness and warmth to a clean, modern silhouette.' },
-  { src: '/corn-yellow.jpeg', title: 'Golden Daylight', tag: 'Bright Edit', description: 'A cheerful yellow shade designed to feel bright, positive, and full of life.' },
-  { src: '/egypt-blue.jpeg', title: 'Royal Blue Calm', tag: 'Statement', description: 'A strong blue color balanced with smooth fabric for a confident yet calm look.' },
-  { src: '/mageta-purple.jpeg', title: 'Soft Plum Touch', tag: 'Evening Edit', description: 'A gentle purple shade that adds depth and elegance without feeling heavy.' },
-  { src: '/pine-green.jpeg', title: 'Forest Green Balance', tag: 'Nature Series', description: 'Inspired by deep green tones, designed for a grounded and peaceful appearance.' },
-  { src: '/stone-white.jpeg', title: 'Pure Stone White', tag: 'Essential', description: 'A clean white look that feels fresh, simple, and timeless in every setting.' }
+  { src: '/blood-red.jpeg', title: 'Blood Red', tag: 'Royal Edition', description: 'A bold design with rich tones and soft contrast panels. Made to stand out while staying elegant.' },
+  { src: '/deep-teal.jpeg', title: 'Deep Teal Green', tag: 'Nature Series', description: 'Fresh colors inspired by nature, balanced with calm tones for a relaxed and graceful look.' },
+  { src: '/double-pink.jpeg', title: 'Double Shaded Pink', tag: 'Romantic Silk', description: 'Delicate lace details paired with smooth fabric, creating a soft and romantic feel.' },
+  { src: '/mocha-brown.jpeg', title: 'Mocha Brown', tag: 'Minimalist', description: 'Warm earthy shades with a clean design. Simple, timeless, and easy to wear.' },
+  { src: '/ocean-guilt.jpeg', title: 'Ocean Guilt', tag: 'Evening Wear', description: 'A deep blue tone with a smooth finish, perfect for evening gatherings and special moments.' },
+  { src: '/pastel-lavender.jpeg', title: 'Pastel Lavender ', tag: 'Summer Breeze', description: 'Light lavender shades designed for comfort, softness, and warm summer days.' },
+  { src: '/pink-jodi.jpeg', title: 'Pink Jodi', tag: 'Summer Breeze', description: 'Gentle pink tones blended for a calm and balanced look with a modern touch.' },
+  { src: '/soft-pink.jpeg', title: 'Soft Peach Pink', tag: 'Summer Breeze', description: 'A soft pink shade that feels light, airy, and perfect for everyday elegance.' },
+  { src: '/antique-mehroon.jpeg', title: 'Antique Mehroon', tag: 'Heritage', description: 'A deep traditional color inspired by classic styles, refined for modern wear.' },
+  { src: '/baby-blue.jpeg', title: 'Baby Blue', tag: 'Day Wear', description: 'A gentle blue tone that feels fresh, relaxed, and comfortable throughout the day.' },
+  { src: '/blush-peach.jpeg', title: 'Blush Peach', tag: 'Spring Edit', description: 'Warm peach tones that bring softness and warmth to a clean, modern silhouette.' },
+  { src: '/corn-yellow.jpeg', title: 'Corn Yellow', tag: 'Bright Edit', description: 'A cheerful yellow shade designed to feel bright, positive, and full of life.' },
+  { src: '/egypt-blue.jpeg', title: 'Egypt Blue', tag: 'Statement', description: 'A strong blue color balanced with smooth fabric for a confident yet calm look.' },
+  { src: '/mageta-purple.jpeg', title: 'Magenta Purple', tag: 'Evening Edit', description: 'A gentle purple shade that adds depth and elegance without feeling heavy.' },
+  { src: '/pine-green.jpeg', title: 'Pine Green', tag: 'Nature Series', description: 'Inspired by deep green tones, designed for a grounded and peaceful appearance.' },
+  { src: '/stone-white.jpeg', title: 'Stone White', tag: 'Essential', description: 'A clean white look that feels fresh, simple, and timeless in every setting.' }
 ];
 
 const filteredRidas = computed(() => {
